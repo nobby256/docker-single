@@ -1,0 +1,10 @@
+version: 3
+services:
+    fluentd:
+        image: fluent/fluentd:latest
+        environment: 
+            FLUENTD_CONF=test.conf
+        volumes: 
+            /opt/docker-single/fluent/mount/test.conf/:/fluentd/etc/test.conf
+        ports: 
+            24224:24224
